@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  -var country = ['台幣', '美金', '港幣', '英鎊', '澳幣', '加拿大幣', '新加坡幣', '瑞士法郎', '日圓']
+  -var country_value=['NT', 'USD', 'HKD', 'GBP', 'AUD', 'CAD', 'SGD', 'CHF', 'JPY']
+  div.container.col-6
+    div.card
+      div.card-header.bg-success 
+        center 貨幣轉換系統
+      div.card-body 
+        div.form-group
+          label.original 持有貨幣
+          select.form-control#original
+            each val, index in country
+              option(value=country_value[index])=val
+        div.row
+          label(style="display:block") 輸入金額
+          input#origin_money(type="number")
+        hr
+        div.form-group
+          label.change 欲轉換之貨幣
+          select.form-control#change
+            each val, index in country
+              option(value=country_value[index])=val
+        p(style="text-align:right;") 
+          button(class="btn btn-primary" id="et_btn") 轉換
+      div.card-footer.bg-success 
+        center eating&copyright
+
+  div.alert.alert-success.alert-dismissible#et_alert(style="display:none;")
+    center 
+      div#et_money
+  
