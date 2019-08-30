@@ -7,7 +7,7 @@
 ## 安裝須知
 須先安裝npm<br> 
 先建立資料夾<br> 
-> \>>mkdir test
+> \>>mkdir test<br> 
 \>>cd test<br> 
 \>>npm init<br> 
 \>>npm install express-generator<br> 
