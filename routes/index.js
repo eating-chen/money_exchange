@@ -4,7 +4,7 @@ var mysql = require('mysql');
 var db_option = {
     host: 'localhost',
     user: 'root',
-    password: 'fa521234',
+    password: 'xxxxx',
     database:'money_change',
     port: '8889'
 };
